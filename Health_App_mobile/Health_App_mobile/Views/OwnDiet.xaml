@@ -41,7 +41,7 @@
                             Command="{Binding Source={x:Reference DietApp}, Path=BindingContext.RemoveCommand}"
                             CommandParameter="{Binding .}"
                             IsDestructive="True"
-                            Text="Delete" />
+                            Text="Törlés" />
                     </ViewCell.ContextActions>
                     <Grid Padding="10">
                         <Frame CornerRadius="20" HasShadow="True">
