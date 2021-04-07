@@ -14,5 +14,8 @@
     <FlyoutItem Title="Saját Étrend" Icon="icon_about.png">
         <ShellContent ContentTemplate="{DataTemplate local:OwnDiet}" Route="OwnDiet" />
     </FlyoutItem>
+    <FlyoutItem Title="BMI kalkulátor" Icon="icon_about.png">
+        <ShellContent ContentTemplate="{DataTemplate local:BmiCalculator}" Route="BmiCalculator" />
+    </FlyoutItem>
 
 </Shell>

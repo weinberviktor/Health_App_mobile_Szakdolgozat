@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:viewmodels="clr-namespace:Health_App_mobile.ViewModels" x:DataType="viewmodels:BMI"
+             x:Class="Health_App_mobile.Views.BmiCalculator">
+
+    <FlexLayout Direction="Column"
+                JustifyContent="SpaceEvenly"
+                Padding="40">
+        <StackLayout>
+            <Label Text="Milyen magas vagy ?"
+                   HorizontalOptions="Center" 
+                   FontSize="Medium"/>
+            <Label Text="{Binding Source={x:Reference HeightSlider},
+                    Path=Value,
+                    StringFormat='{0:F0} cm'}"
+                    HorizontalOptions="Center"/>
+            <Slider x:Name="HeightSlider"
+                    Maximum="220"
+                    Minimum="40"
+                    Value="{Binding Magassag}"
+                    ThumbColor="Black"
+                    BackgroundColor="Wheat"/>
+        </StackLayout>
+        <StackLayout>
+            <Label Text="Testsúly"
+                   HorizontalOptions="Center" FontSize="Medium"  />
+            <Label Text="{Binding Source={x:Reference WeightSlider},
+                    Path=Value,
+                    StringFormat='{0:F0} kg'}"
+                    HorizontalOptions="Center"/>
+            <Slider x:Name="WeightSlider"
+                    Maximum="300"
+                    Minimum="40"
+                    Value="{Binding Testsuly}"
+                    ThumbColor="Black"
+                    BackgroundColor="Wheat"/>
+        </StackLayout>
+        <StackLayout>
+            <Label Text="A te BMI értéked"
+                   HorizontalOptions="Center"
+                   />
+            <Label Text="{Binding Bmi}"
+                   HorizontalOptions="Center"
+                   FontSize="48"
+                   />
+            <Label Text="{Binding Osztalyozas}"
+                  HorizontalOptions="Center"
+                   />
+        </StackLayout>
+    </FlexLayout>
+</ContentPage>
