@@ -2,11 +2,14 @@
 <ContentPage x:Class="Health_App_mobile.Views.OwnDiet"
              xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:viewmodels="clr-namespace:Health_mobile_app.ViewModels"
+             xmlns:viewmodels1="clr-namespace:Health_mobile_app.ViewModels"
              xmlns:model="clr-namespace:Health_App_mobile.Models"
-             xmlns:xct="http://xamarin.com/schemas/2020/toolkit">
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             xmlns:viewmodels="clr-namespace:Health_App_mobile.ViewModels"
+             x:Name="DietApp"
+             x:DataType="viewmodels:OwnDietVM">
     <ContentPage.BindingContext>
-        <viewmodels:DietPageData />
+        <viewmodels:OwnDietVM />
     </ContentPage.BindingContext>
 
     <ContentPage.Resources>
@@ -25,7 +28,7 @@
         HasUnevenRows="True"
         IsPullToRefreshEnabled="True"
         IsRefreshing="{Binding IsBusy, Mode=OneWay}"
-        ItemsSource="{Binding Coffee}"
+        ItemsSource="{Binding Diet}"
         RefreshCommand="{Binding RefreshCommand}"
         RefreshControlColor="Red"
         SelectionMode="None"
@@ -35,7 +38,7 @@
                 <ViewCell>
                     <ViewCell.ContextActions>
                         <MenuItem
-                            Command="{Binding Source={x:Reference MyCoffeePage}, Path=BindingContext.RemoveCommand}"
+                            Command="{Binding Source={x:Reference DietApp}, Path=BindingContext.RemoveCommand}"
                             CommandParameter="{Binding .}"
                             IsDestructive="True"
                             Text="Delete" />

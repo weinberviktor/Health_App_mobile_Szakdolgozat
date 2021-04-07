@@ -2,29 +2,42 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:viewmodels="clr-namespace:Health_mobile_app.ViewModels"
-             xmlns:model1="clr-namespace:Health_App_mobile.Models"
+             xmlns:model="clr-namespace:Health_App_mobile.Models" xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
              x:Class="Health_App_mobile.Views.DietPage"
              x:DataType="viewmodels:DietPageData">
     <ContentPage.BindingContext>
         <viewmodels:DietPageData/>
     </ContentPage.BindingContext>
 
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <xct:ItemSelectedEventArgsConverter x:Key="ItemSelectedEventArgsConverter"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
     <ListView BackgroundColor="Transparent"
               CachingStrategy="RecycleElement"
-              ItemSelected="Listview_ItemSelected"
-              ItemTapped="Listview_ItemTapped"
-              ItemsSource="{Binding DietGroup}"
-              IsGroupingEnabled="True"
               GroupDisplayBinding="{Binding Key}"
               HasUnevenRows="True"
-              SeparatorVisibility="None"
+              IsGroupingEnabled="True"
               IsPullToRefreshEnabled="True"
               IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+              ItemsSource="{Binding DietGroup}"
               RefreshCommand="{Binding RefreshCommand}"
-              RefreshControlColor="Green">
+              RefreshControlColor="Green"
+              SelectedItem="{Binding SelectedDiet, Mode=TwoWay}"
+              SeparatorVisibility="None">
+             <!-- ItemSelected="Listview_ItemSelected"
+              ItemTapped="Listview_ItemTapped"-->
 
+        <ListView.Behaviors>
+            <xct:EventToCommandBehavior 
+                EventName="ItemSelected"
+                Command="{Binding SelectedCommand}"
+                EventArgsConverter="{StaticResource ItemSelectedEventArgsConverter}"/>
+        </ListView.Behaviors>
         <ListView.ItemTemplate>
-            <DataTemplate x:DataType="model1:Diet">
+            <DataTemplate x:DataType="model:Diet">
                 <ViewCell>
                     <ViewCell.ContextActions>
                         <MenuItem Text="Hozzáadás a kedvencekhez"

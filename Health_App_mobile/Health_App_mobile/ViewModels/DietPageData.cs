@@ -18,6 +18,10 @@ namespace Health_mobile_app.ViewModels
         public ObservableRangeCollection<Diet> Diet { get; set; }
         public ObservableRangeCollection<Grouping<string, Diet>> DietGroup { get; set; }
         public AsyncCommand RefreshCommand { get; }
+
+        public AsyncCommand<Diet> FavoriteCommand { get; }
+        public AsyncCommand<Diet> SelectedCommand { get; }
+
         public Command LoadMoreCommand { get; }
         public Command DelayLoadMoreCommand { get; }
         public Command ClearCommand { get; }
@@ -36,6 +40,30 @@ namespace Health_mobile_app.ViewModels
             ClearCommand = new Command(Clear);
             DelayLoadMoreCommand = new Command(DelayLoadMore);
 
+            FavoriteCommand = new AsyncCommand<Diet>(Favorite);
+            SelectedCommand = new AsyncCommand<Diet>(Selected);
+        }
+        async Task Favorite(Diet diet)
+        {
+            if (diet == null)
+                return;
+
+            await Application.Current.MainPage.DisplayAlert("Kedvencekhez adva", diet.Etel, "OK");
+
+        }
+        Diet previouslySelected;
+        Diet selectedDiet;
+        public Diet SelectedDiet
+        {
+            get => selectedDiet;
+            set => SetProperty(ref selectedDiet, value);
+        }
+        async Task Selected(Diet diet)
+        {
+            if (diet == null)
+                return;
+            //SelectedDiet = null;
+            await Application.Current.MainPage.DisplayAlert("Kiválasztva", diet.Etel, "Ok");
         }
 
         async Task Refresh()
