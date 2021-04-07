@@ -78,12 +78,12 @@ namespace Health_mobile_app.ViewModels
             if (Diet.Count >= 20)
                 return;
 
-            Diet.Add(new Diet { Etkezes = "Reggeli", Etel = "Zabkasa", Mennyiseg = "100g" });
-            Diet.Add(new Diet { Etkezes = "Ebéd", Etel = "Ami jól esik", Mennyiseg = "Sokat" });
-            Diet.Add(new Diet { Etkezes = "Vacsora", Etel = "Ne egyél sokat", Mennyiseg = "2 db alma" });
-            Diet.Add(new Diet { Etkezes = "Reggeli", Etel = "Zabkasa2", Mennyiseg = "100g" });
-            Diet.Add(new Diet { Etkezes = "Ebéd", Etel = "Ami jól esik2", Mennyiseg = "Sokat" });
-            Diet.Add(new Diet { Etkezes = "Vacsora", Etel = "Ne egyél sokat2", Mennyiseg = "2 db alma" });
+            Diet.Add(new Diet { Etkezes = "Reggeli", Etel = "Teljes kiőrlésű szendvics", Mennyiseg = "80g kenyér, 25g csirkemell felvágott" });
+            Diet.Add(new Diet { Etkezes = "Ebéd", Etel = "Csirke-rizs", Mennyiseg = "50g barnarizs, 100g csirkemell párolva, 150g brokkoli" });
+            Diet.Add(new Diet { Etkezes = "Vacsora", Etel = "Saláta", Mennyiseg = "4 marék saláta, 25g avokádó, 4db puffasztott rizs" });
+            Diet.Add(new Diet { Etkezes = "Reggeli", Etel = "Melegszendvics", Mennyiseg = "80g kenyér, 25g szendvicskrém, 30g trapista sajt" });
+            Diet.Add(new Diet { Etkezes = "Ebéd", Etel = "Kacsamell", Mennyiseg = "120g kacsamell, 200g cékla, 200g édesburgonya" });
+            Diet.Add(new Diet { Etkezes = "Vacsora", Etel = "Palacsinta ", Mennyiseg = "50g zabliszt 1/3 tk szódabikarbóna, 100ml tej, 1db tojás, 100g túró" });
 
             DietGroup.Clear();
 

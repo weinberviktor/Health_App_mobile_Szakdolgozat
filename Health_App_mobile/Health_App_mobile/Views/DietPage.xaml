@@ -27,8 +27,6 @@
               RefreshControlColor="Green"
               SelectedItem="{Binding SelectedDiet, Mode=TwoWay}"
               SeparatorVisibility="None">
-             <!-- ItemSelected="Listview_ItemSelected"
-              ItemTapped="Listview_ItemTapped"-->
 
         <ListView.Behaviors>
             <xct:EventToCommandBehavior 

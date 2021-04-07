@@ -57,10 +57,10 @@
                                         FontSize="Large"
                                         Text="{Binding Mennyiseg}"
                                         VerticalOptions="Center" />
-                                    <Label
+                                   <!--<Label
                                         FontSize="Small"
                                         Text="{Binding Id}"
-                                        VerticalOptions="Center" />
+                                        VerticalOptions="Center" />--> 
                                 </StackLayout>
                             </StackLayout>
                         </Frame>
