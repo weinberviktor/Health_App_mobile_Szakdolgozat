@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="Health_App_mobile.Views.OwnDiet"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:Health_mobile_app.ViewModels"
+             xmlns:model="clr-namespace:Health_App_mobile.Models"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit">
+    <ContentPage.BindingContext>
+        <viewmodels:DietPageData />
+    </ContentPage.BindingContext>
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <xct:ItemSelectedEventArgsConverter x:Key="ItemSelectedEventArgsConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Étrend hozzáadása" Command="{Binding AddCommand}"/>
+    </ContentPage.ToolbarItems>
+
+    <ListView
+        BackgroundColor="Transparent"
+        CachingStrategy="RecycleElement"
+        HasUnevenRows="True"
+        IsPullToRefreshEnabled="True"
+        IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+        ItemsSource="{Binding Coffee}"
+        RefreshCommand="{Binding RefreshCommand}"
+        RefreshControlColor="Red"
+        SelectionMode="None"
+        SeparatorVisibility="None">
+        <ListView.ItemTemplate>
+            <DataTemplate x:DataType="model:Diet">
+                <ViewCell>
+                    <ViewCell.ContextActions>
+                        <MenuItem
+                            Command="{Binding Source={x:Reference MyCoffeePage}, Path=BindingContext.RemoveCommand}"
+                            CommandParameter="{Binding .}"
+                            IsDestructive="True"
+                            Text="Delete" />
+                    </ViewCell.ContextActions>
+                    <Grid Padding="10">
+                        <Frame CornerRadius="20" HasShadow="True">
+                            <StackLayout Orientation="Horizontal">
+                                <Image Source="Dietimage.jpg"
+                                       WidthRequest="65"/>
+                                <StackLayout VerticalOptions="Center">
+                                    <Label
+                                        FontSize="Large"
+                                        Text="{Binding Etel}"
+                                        VerticalOptions="Center" />
+                                    <Label
+                                        FontSize="Large"
+                                        Text="{Binding Mennyiseg}"
+                                        VerticalOptions="Center" />
+                                    <Label
+                                        FontSize="Small"
+                                        Text="{Binding Id}"
+                                        VerticalOptions="Center" />
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>

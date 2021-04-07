@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Shell x:Class="Health_App_mobile.AppShell"
+       xmlns="http://xamarin.com/schemas/2014/forms" 
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:local="clr-namespace:Health_App_mobile.Views"
+       Title="Health_App_mobile">
+
+    <FlyoutItem Title="Aktiviás" Icon="icon_about.png">
+        <ShellContent ContentTemplate="{DataTemplate local:Activity}" Route="Activity" />
+    </FlyoutItem>
+    <FlyoutItem Title="Étrend" Icon="icon_about.png">
+        <ShellContent  ContentTemplate="{DataTemplate local:DietPage}" Route="DietPage" />
+    </FlyoutItem>
+    <FlyoutItem Title="Saját Étrend" Icon="icon_about.png">
+        <ShellContent ContentTemplate="{DataTemplate local:OwnDiet}" Route="OwnDiet" />
+    </FlyoutItem>
+
+</Shell>

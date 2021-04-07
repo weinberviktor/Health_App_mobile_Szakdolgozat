@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:Health_mobile_app.ViewModels"
+             xmlns:model1="clr-namespace:Health_App_mobile.Models"
+             x:Class="Health_App_mobile.Views.DietPage"
+             x:DataType="viewmodels:DietPageData">
+    <ContentPage.BindingContext>
+        <viewmodels:DietPageData/>
+    </ContentPage.BindingContext>
+
+    <ListView BackgroundColor="Transparent"
+              CachingStrategy="RecycleElement"
+              ItemSelected="Listview_ItemSelected"
+              ItemTapped="Listview_ItemTapped"
+              ItemsSource="{Binding DietGroup}"
+              IsGroupingEnabled="True"
+              GroupDisplayBinding="{Binding Key}"
+              HasUnevenRows="True"
+              SeparatorVisibility="None"
+              IsPullToRefreshEnabled="True"
+              IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+              RefreshCommand="{Binding RefreshCommand}"
+              RefreshControlColor="Green">
+
+        <ListView.ItemTemplate>
+            <DataTemplate x:DataType="model1:Diet">
+                <ViewCell>
+                    <ViewCell.ContextActions>
+                        <MenuItem Text="Hozzáadás a kedvencekhez"
+                                  Clicked="Menu_Clicked"></MenuItem>
+                    </ViewCell.ContextActions>
+                    <Grid Padding="10">
+                        <Frame  CornerRadius="20"
+                                HasShadow="True">
+                            <StackLayout Orientation="Horizontal">
+                                <Image Source="Dietimage.jpg"
+                                       WidthRequest="65">
+                                </Image>
+                                <StackLayout VerticalOptions="Center">
+                                    <Label VerticalOptions="Center"
+                                       FontSize="Medium"
+                                       Text="{Binding Etel}"/>
+                                    <Label VerticalOptions="Center"
+                                       FontSize="Medium"
+                                       Text="{Binding Mennyiseg}"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+        <ListView.Header>
+            <StackLayout>
+                <Label Text="Itt találhatod az ajánlott ételeket melyeket érdemes fogyaszatni." 
+                       Padding="10"
+                       FontAttributes="Bold"/>
+            </StackLayout>
+        </ListView.Header>
+        <ListView.Footer>
+            <StackLayout HorizontalOptions="Center" Orientation="Horizontal">
+                <Button Command="{Binding LoadMoreCommand}" Text="Betöltés" />
+            </StackLayout>
+        </ListView.Footer>
+    </ListView>
+</ContentPage>
