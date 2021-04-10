@@ -17,6 +17,7 @@ namespace Health_App_mobile.Views
     {
         public Registration()
         {
+            SetValue(NavigationPage.HasNavigationBarProperty, false);
             InitializeComponent();
         }
 
@@ -33,10 +34,10 @@ namespace Health_App_mobile.Views
             db.Insert(eszkozok);
             Device.BeginInvokeOnMainThread(async () =>
             {
-                var eredmeny = await this.DisplayAlert("Regisztráció", "Sikeresen regisztráltál", "OK", "Kilép");
+                var eredmeny = await this.DisplayAlert("Regisztráció", "Sikeresen regisztráltál", "OK", ".");
 
                 if (eredmeny)
-                    await Navigation.PushAsync(new Activity());
+                    await Navigation.PushAsync(new Login());
 
             });
         }

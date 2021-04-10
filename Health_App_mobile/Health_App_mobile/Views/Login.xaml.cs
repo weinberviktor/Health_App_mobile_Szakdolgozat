@@ -17,6 +17,7 @@ namespace Health_App_mobile.Views
     {
         public Login()
         {
+            SetValue(NavigationPage.HasNavigationBarProperty, false);
             InitializeComponent();
         }
 
@@ -25,27 +26,30 @@ namespace Health_App_mobile.Views
             await Navigation.PushAsync(new Registration());
         }
 
-        private void Button_Clicked_1(object sender, EventArgs e)
+        async private void Button_Clicked_1(object sender, EventArgs e)
         {
             var dbut = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "Felhasznalok.db");
             var db = new SQLiteConnection(dbut);
             var lekerdzeses = db.Table<RegUsers>().Where(u => u.Felhasznev.Equals(Entryfelhasz.Text) && u.Jelszo.Equals(Entryjelsz.Text)).FirstOrDefault();
             if(lekerdzeses!=null)
             {
-                App.Current.MainPage = new NavigationPage(new Activity());
+                //App.Current.MainPage = new NavigationPage(new Activity());
+                await DisplayAlert("Bejelentkezve", "Felül a 3 vonal alatt folytathatod az alkalmazás használatát.", "OK");
             }
             else
             {
                 Device.BeginInvokeOnMainThread(async () =>
                 {
-                    var eredmeny = await this.DisplayAlert("Nem található felhasználó", "Regisztrálj!", "OK", "Kilép");
+                    var eredmeny = await this.DisplayAlert("Nem található felhasználó", "Regisztrálj!", "Regisztrálok", "Kilépés");
 
                     if (eredmeny)
-                        await Navigation.PushAsync(new Activity());
-                        //await Shell.Current.GoToAsync("asd");
-                    else
                     {
                         await Navigation.PushAsync(new Registration());
+                    }
+                    else
+                    {
+                        await Navigation.PushAsync(new Login());
+                        //await Shell.Current.GoToAsync("acti");
                     }
                 });
             }

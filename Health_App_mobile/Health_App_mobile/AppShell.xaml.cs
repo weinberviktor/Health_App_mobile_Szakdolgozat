@@ -9,7 +9,7 @@ namespace Health_App_mobile
         {
             InitializeComponent();
 
-            //Routing.RegisterRoute("asd", typeof(Activity));
+            //Routing.RegisterRoute("acti", typeof(Activity));
         }
     }
 }

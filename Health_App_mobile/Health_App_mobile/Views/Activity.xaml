@@ -6,11 +6,6 @@
     <ContentPage.Content>
         <StackLayout>
             <Image Source="Dietimage.jpg" HorizontalOptions="CenterAndExpand"/>
-            <Button Text="Kijelentkezés"
-                HorizontalOptions="CenterAndExpand"
-                VerticalOptions="End" 
-                BackgroundColor="White"
-                Clicked="Button_Clicked" />
         </StackLayout>
         
     </ContentPage.Content>
