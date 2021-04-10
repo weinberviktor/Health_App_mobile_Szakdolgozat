@@ -1,6 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:viewmodels="clr-namespace:Health_App_mobile.ViewModels" x:DataType="viewmodels:BMI"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:Health_App_mobile.ViewModels" 
+             x:DataType="viewmodels:BMI"
              x:Class="Health_App_mobile.Views.BmiCalculator">
 
     <FlexLayout Direction="Column"

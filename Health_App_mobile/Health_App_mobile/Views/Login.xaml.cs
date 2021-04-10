@@ -38,7 +38,7 @@ namespace Health_App_mobile.Views
             {
                 Device.BeginInvokeOnMainThread(async () =>
                 {
-                    var eredmeny = await this.DisplayAlert("Nem találahtó felhasználó", "Regisztrálj!", "OK", "Kilép");
+                    var eredmeny = await this.DisplayAlert("Nem található felhasználó", "Regisztrálj!", "OK", "Kilép");
 
                     if (eredmeny)
                         await Navigation.PushAsync(new Activity());

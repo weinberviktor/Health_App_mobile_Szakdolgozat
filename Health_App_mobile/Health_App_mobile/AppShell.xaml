@@ -5,7 +5,10 @@
        xmlns:local="clr-namespace:Health_App_mobile.Views"
        Title="Health_App_mobile">
 
-    <FlyoutItem Title="Aktiviás" Icon="icon_about.png">
+    <FlyoutItem Title="Regisztráció/Bejelentkezés" Icon="icon_about.png">
+        <ShellContent ContentTemplate="{DataTemplate local:Login}" Route="Registration"/>
+    </FlyoutItem>
+    <FlyoutItem Title="Aktivitás" Icon="icon_about.png">
         <ShellContent ContentTemplate="{DataTemplate local:Activity}" Route="Activity" />
     </FlyoutItem>
     <FlyoutItem Title="Étrend" Icon="icon_about.png">
@@ -17,8 +20,6 @@
     <FlyoutItem Title="BMI kalkulátor" Icon="icon_about.png">
         <ShellContent ContentTemplate="{DataTemplate local:BmiCalculator}" Route="BmiCalculator" />
     </FlyoutItem>
-    <FlyoutItem Title="Regisztráció/Bejelentkezés" Icon="icon_about.png">
-        <ShellContent ContentTemplate="{DataTemplate local:Login}" Route="Registration"/>
-    </FlyoutItem>
+    
 
 </Shell>
