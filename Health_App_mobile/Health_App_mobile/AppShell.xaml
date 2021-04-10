@@ -17,5 +17,8 @@
     <FlyoutItem Title="BMI kalkulátor" Icon="icon_about.png">
         <ShellContent ContentTemplate="{DataTemplate local:BmiCalculator}" Route="BmiCalculator" />
     </FlyoutItem>
+    <FlyoutItem Title="Regisztráció/Bejelentkezés" Icon="icon_about.png">
+        <ShellContent ContentTemplate="{DataTemplate local:Login}" Route="Registration"/>
+    </FlyoutItem>
 
 </Shell>

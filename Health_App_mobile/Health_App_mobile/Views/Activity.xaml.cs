@@ -16,5 +16,10 @@ namespace Health_App_mobile.Views
         {
             InitializeComponent();
         }
+
+        async private void Button_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Login());
+        }
     }
 }
