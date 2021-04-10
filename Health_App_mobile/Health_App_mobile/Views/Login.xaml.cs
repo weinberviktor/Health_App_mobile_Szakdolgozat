@@ -42,6 +42,7 @@ namespace Health_App_mobile.Views
 
                     if (eredmeny)
                         await Navigation.PushAsync(new Activity());
+                        //await Shell.Current.GoToAsync("asd");
                     else
                     {
                         await Navigation.PushAsync(new Registration());
