@@ -2,12 +2,16 @@
 <ContentPage x:Class="Health_App_mobile.Views.Activity"
              xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             >
+             Padding="10">
     <ContentPage.Content>
-        <Button Text="Kijelentkezés"
+        <StackLayout>
+            <Image Source="Dietimage.jpg" HorizontalOptions="CenterAndExpand"/>
+            <Button Text="Kijelentkezés"
                 HorizontalOptions="CenterAndExpand"
                 VerticalOptions="End" 
                 BackgroundColor="White"
                 Clicked="Button_Clicked" />
+        </StackLayout>
+        
     </ContentPage.Content>
 </ContentPage>

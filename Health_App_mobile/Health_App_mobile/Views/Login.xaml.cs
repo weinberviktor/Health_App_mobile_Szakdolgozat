@@ -41,10 +41,10 @@ namespace Health_App_mobile.Views
                     var eredmeny = await this.DisplayAlert("Nem találahtó felhasználó", "Regisztrálj!", "OK", "Kilép");
 
                     if (eredmeny)
-                        await Navigation.PushAsync(new Login());
+                        await Navigation.PushAsync(new Activity());
                     else
                     {
-                        await Navigation.PushAsync(new Login());
+                        await Navigation.PushAsync(new Registration());
                     }
                 });
             }

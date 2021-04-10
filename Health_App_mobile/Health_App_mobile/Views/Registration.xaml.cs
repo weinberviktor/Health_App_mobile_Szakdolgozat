@@ -36,7 +36,7 @@ namespace Health_App_mobile.Views
                 var eredmeny = await this.DisplayAlert("Regisztráció", "Sikeresen regisztráltál", "OK", "Kilép");
 
                 if (eredmeny)
-                    await Navigation.PushAsync(new Login());
+                    await Navigation.PushAsync(new Activity());
 
             });
         }
