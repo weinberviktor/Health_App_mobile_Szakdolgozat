@@ -16,5 +16,6 @@ namespace Health_App_mobile.Views
         {
             InitializeComponent();
         }
+
     }
 }

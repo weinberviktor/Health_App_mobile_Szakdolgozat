@@ -3,10 +3,34 @@
              xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              Padding="10">
-    <ContentPage.Content>
-        <StackLayout>
-            <Image Source="Dietimage.jpg" HorizontalOptions="CenterAndExpand"/>
-        </StackLayout>
-        
-    </ContentPage.Content>
+
+    <StackLayout Margin="0,40,0,0"  HorizontalOptions="Center">
+        <Label Text="Event Scheduler App"
+               FontSize="Large"
+               Margin="0, 20"
+               HorizontalTextAlignment="Center"
+               />
+
+        <Label Text="Start Date:" />
+
+        <DatePicker x:Name="startDatePicker"
+                    Format="D"
+                    Margin="30, 0, 0, 30"
+                     />
+
+        <Label Text="End Date:" />
+
+        <DatePicker x:Name="endDatePicker" 
+                    Format="D"
+                    Margin="30, 0, 0, 30"
+                     />
+
+        <Button x:Name="CheckBtn" BackgroundColor="White" /> <!-- Text="Check Availability :" Clicked="Handle_Clicked" -->
+        <Label x:Name="resultLabel"
+               FontAttributes="Bold"
+               HorizontalTextAlignment="Center"
+               Text="The Selected  start date is : "/>
+
+    </StackLayout>
+
 </ContentPage>

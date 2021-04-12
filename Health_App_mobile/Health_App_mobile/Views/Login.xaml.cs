@@ -33,8 +33,9 @@ namespace Health_App_mobile.Views
             var lekerdzeses = db.Table<RegUsers>().Where(u => u.Felhasznev.Equals(Entryfelhasz.Text) && u.Jelszo.Equals(Entryjelsz.Text)).FirstOrDefault();
             if(lekerdzeses!=null)
             {
-                //App.Current.MainPage = new NavigationPage(new Activity());
+                
                 await DisplayAlert("Bejelentkezve", "Felül a 3 vonal alatt folytathatod az alkalmazás használatát.", "OK");
+                App.Current.MainPage = new NavigationPage(new Activity());
             }
             else
             {
