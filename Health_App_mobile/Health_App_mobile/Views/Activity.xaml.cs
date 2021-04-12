@@ -15,7 +15,14 @@ namespace Health_App_mobile.Views
         public Activity()
         {
             InitializeComponent();
+
         }
 
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            Application.Current.Properties["Szoveg"] = etel.Text;
+            etel.Text = string.Empty;
+            DisplayAlert("Étel felírva","Eltároltuk az ételed erre a napra","Ok");
+        }
     }
 }
