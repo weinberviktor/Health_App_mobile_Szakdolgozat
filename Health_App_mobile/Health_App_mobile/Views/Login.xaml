@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Health_App_mobile.Views.Login"
              xmlns:viewmodels="clr-namespace:Health_App_mobile.ViewModels"
-             xmlns:models="clr-namespace:Health_App_mobile.Models">
+             Title="Regisztrálás"
+             xmlns:models="clr-namespace:Health_App_mobile.Models" xmlns:health_app_mobile="clr-namespace:Health_App_mobile" x:DataType="health_app_mobile:AppShell">
     
     <ContentPage.Content>
         <ScrollView>
@@ -13,7 +14,7 @@
                        HorizontalOptions="Center"
                        FontSize="30"/>
                 <Label Padding="10"
-                    Text="Ha még nem regisztrálát akkor reigsztrálással kezdj!"/>
+                    Text="Ha még nem regisztrálát akkor regisztrálással kezdj!"/>
                 <Grid Margin="20,0,20,0" VerticalOptions="CenterAndExpand">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="auto"/>

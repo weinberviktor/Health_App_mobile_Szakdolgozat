@@ -34,10 +34,14 @@ namespace Health_App_mobile.Views
             db.Insert(eszkozok);
             Device.BeginInvokeOnMainThread(async () =>
             {
-                var eredmeny = await this.DisplayAlert("Regisztráció", "Sikeresen regisztráltál", "OK", ".");
+                var eredmeny = await this.DisplayAlert("Regisztráció", "Sikeresen regisztráltál", "OK", "Főoldal");
 
                 if (eredmeny)
-                    await Navigation.PushAsync(new Login());
+                    await Shell.Current.GoToAsync($"//{nameof(Activity)}");
+                else
+                {
+                    await Shell.Current.GoToAsync($"//{nameof(Activity)}");
+                }
 
             });
         }

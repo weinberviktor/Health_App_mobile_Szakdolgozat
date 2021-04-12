@@ -34,8 +34,10 @@ namespace Health_App_mobile.Views
             if(lekerdzeses!=null)
             {
                 
-                await DisplayAlert("Bejelentkezve", "Felül a 3 vonal alatt folytathatod az alkalmazás használatát.", "OK");
-                App.Current.MainPage = new NavigationPage(new Activity());
+                //await DisplayAlert("Bejelentkezve", "Felül a 3 vonal alatt folytathatod az alkalmazás használatát.", "OK");
+                //App.Current.MainPage = new NavigationPage(new Activity());
+                await Shell.Current.GoToAsync($"//{nameof(Activity)}");
+                
             }
             else
             {
@@ -49,8 +51,8 @@ namespace Health_App_mobile.Views
                     }
                     else
                     {
-                        await Navigation.PushAsync(new Login());
-                        //await Shell.Current.GoToAsync("acti");
+                        //await Navigation.PushAsync(new Login());
+                        await Shell.Current.GoToAsync($"//{nameof(Activity)}");
                     }
                 });
             }

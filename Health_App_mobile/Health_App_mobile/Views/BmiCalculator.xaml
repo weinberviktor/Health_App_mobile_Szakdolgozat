@@ -21,7 +21,8 @@
                     Minimum="40"
                     Value="{Binding Magassag}"
                     ThumbColor="Black"
-                    BackgroundColor="Wheat"/>
+                    BackgroundColor="Wheat"
+                    HeightRequest="25"/>
         </StackLayout>
         <StackLayout>
             <Label Text="Testsúly"
@@ -33,6 +34,7 @@
             <Slider x:Name="WeightSlider"
                     Maximum="300"
                     Minimum="40"
+                    HeightRequest="25"
                     Value="{Binding Testsuly}"
                     ThumbColor="Black"
                     BackgroundColor="Wheat"/>
