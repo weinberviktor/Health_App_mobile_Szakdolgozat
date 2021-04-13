@@ -17,7 +17,7 @@ namespace Health_App_mobile.Views
         {
             InitializeComponent();
             Eteleklista = new List<Etelek>();
-            Eteleklista.Add(new Etelek { Etelneve = "Fehér kenyér", Etelemennyiseg = "180g/szelet", Etelekaloria="60 kcal" });
+            Eteleklista.Add(new Etelek { Etelneve = "Fehér kenyér", Etelemennyiseg = "60g/szelet", Etelekaloria="180 kcal" });
             Eteleklista.Add(new Etelek { Etelneve = "Fehér kenyér", Etelemennyiseg = "180g/szelet", Etelekaloria = "60 kcal" });
             Eteleklista.Add(new Etelek { Etelneve = "Fehér kenyér", Etelemennyiseg = "180g/szelet", Etelekaloria = "60 kcal" });
             Eteleklista.Add(new Etelek { Etelneve = "Fehér kenyér", Etelemennyiseg = "180g/szelet", Etelekaloria = "60 kcal" });
@@ -43,6 +43,11 @@ namespace Health_App_mobile.Views
         private void Button_Clicked_1(object sender, EventArgs e)
         {
             //etel.Text = string.Empty;
+        }
+
+        private void Button_Clicked_2(object sender, EventArgs e)
+        {
+
         }
     }
 }
