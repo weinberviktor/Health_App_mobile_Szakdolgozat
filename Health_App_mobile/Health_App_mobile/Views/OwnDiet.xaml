@@ -7,7 +7,8 @@
              xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
              xmlns:viewmodels="clr-namespace:Health_App_mobile.ViewModels"
              x:Name="DietApp"
-             x:DataType="viewmodels:OwnDietVM">
+             x:DataType="viewmodels:OwnDietVM"
+             Title="Saját étrend">
     <ContentPage.BindingContext>
         <viewmodels:OwnDietVM />
     </ContentPage.BindingContext>

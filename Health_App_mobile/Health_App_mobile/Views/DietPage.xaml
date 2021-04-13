@@ -5,7 +5,8 @@
              xmlns:model="clr-namespace:Health_App_mobile.Models" 
              xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
              x:Class="Health_App_mobile.Views.DietPage"
-             x:DataType="viewmodels:DietPageData">
+             x:DataType="viewmodels:DietPageData"
+             Title="Étrend">
     <ContentPage.BindingContext>
         <viewmodels:DietPageData/>
     </ContentPage.BindingContext>

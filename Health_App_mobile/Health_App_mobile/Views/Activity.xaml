@@ -5,11 +5,10 @@
              Padding="10">
 
     <StackLayout Margin="0,10,0,0"  HorizontalOptions="Center">
-        <Label Text="Itt tárolhatod hogy melyik nap mit ettél illetve mennyi kalória"
+        <Label Text="Írd be mit ettél a ami nap"
                FontSize="Large"
                Margin="0, 20"
                HorizontalTextAlignment="Center"/>
-        <Label Text="Dátum választó" />
 
         <DatePicker x:Name="startDatePicker"
                     HorizontalOptions="Center"
@@ -17,11 +16,10 @@
                     Format="yyyy//MM/dd"
                     Margin="30, 0, 0, 30"/>
 
-        <Label Text="" />
-
         <Entry BackgroundColor="Wheat" 
-               HeightRequest="150"
-               Placeholder="Írd be mit ettél a mai nap és hogy mennyi kalória"
+               HeightRequest="50"
+               WidthRequest="370"
+               Placeholder="Mit ettél?"
                ClearButtonVisibility="WhileEditing"
                x:Name="etel"/>
 

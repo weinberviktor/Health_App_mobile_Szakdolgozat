@@ -8,7 +8,7 @@
     <FlyoutItem Title="Regisztráció/Bejelentkezés" Icon="icon_about.png">
         <ShellContent ContentTemplate="{DataTemplate local:Login}" Route="Registration"/>
     </FlyoutItem>
-    <FlyoutItem Title="Naptár" Icon="icon_about.png">
+    <FlyoutItem Title="Kalória" Icon="icon_about.png">
         <ShellContent ContentTemplate="{DataTemplate local:Activity}" Route="Activity" />
     </FlyoutItem>
     <FlyoutItem Title="Étrend" Icon="icon_about.png">
