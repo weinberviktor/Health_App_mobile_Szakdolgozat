@@ -45,6 +45,12 @@
                     </ViewCell>
             </DataTemplate>
         </ListView.ItemTemplate>
+        <ListView.Header>
+            <StackLayout>
+                <Label Text="Napi kalória"/>
+                <SearchBar/>
+            </StackLayout>
+        </ListView.Header>
     </ListView>
     
 </ContentPage>
