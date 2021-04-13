@@ -28,5 +28,6 @@ namespace Health_App_mobile.Views
         {
             etel.Text = string.Empty;
         }
+
     }
 }
