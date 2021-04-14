@@ -2,81 +2,58 @@
 <ContentPage x:Class="Health_App_mobile.Views.Activity"
              xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Kalória számláló"
              Padding="10">
 
     <ListView
         ItemsSource="{Binding Eteleklista}"
         BackgroundColor="Transparent"
         HasUnevenRows="True"
-        SeparatorVisibility="None">
+        SeparatorVisibility="None"
+        x:Name="listview">
 
         <ListView.ItemTemplate>
             <DataTemplate>
                 <ViewCell>
                     <Grid Padding="10">
                         <Frame  CornerRadius="20"
-                                    HasShadow="True">
-                                    <StackLayout Orientation="Horizontal"
-                                                 >
-                                        
-                                        <StackLayout VerticalOptions="Center">
-                                            <Label VerticalOptions="Center"
-                                                       FontSize="Medium"
-                                                       Text="{Binding Etelneve}"
+                                HasShadow="True">
+                            <StackLayout Orientation="Horizontal">
+                                <StackLayout VerticalOptions="Center">
+                                    <Label VerticalOptions="Center"
+                                                   FontSize="Medium"
+                                                   Text="{Binding Etelneve}"
                                                    Grid.Row="1"/>
-                                            <Label VerticalOptions="Center"
-                                                       FontSize="Medium"
-                                                       Text="{Binding Etelemennyiseg}"
-                                                   Grid.Row="1"/>
-                                            <Label FontSize="Small"
-                                                    Text="{Binding Etelekaloria}"
-                                                   Grid.Row="1"/>
-                                        </StackLayout>
+                                    <Label VerticalOptions="Center"
+                                                   FontSize="Medium"
+                                                   Text="{Binding Etelemennyiseg}"/>
+                                    <Label FontSize="Small"
+                                                    Text="{Binding Etelekaloria}"/>
+                                </StackLayout>
                                 <Button Text="Hozzáadás"
-                                            Clicked="Button_Clicked_2"
-                                            BackgroundColor="Blue"
-                                            TextColor="White"
-                                                CornerRadius="15"
-                                                Grid.Row="0"
+                                        Clicked="Button_Clicked_2"
+                                        BackgroundColor="Blue"
+                                        TextColor="White"
+                                        CornerRadius="15"
                                         HorizontalOptions="EndAndExpand"/>
                             </StackLayout>
-                                </Frame>
-                            </Grid>
-                    </ViewCell>
+                        </Frame>
+                    </Grid>
+                </ViewCell>
             </DataTemplate>
         </ListView.ItemTemplate>
         <ListView.Header>
             <StackLayout>
-                <Label Text="Napi kalória"/>
-                <SearchBar/>
+                <Label Text="Napi kalória"
+                       FontSize="Large"/>
+                <SearchBar x:Name="kereso"
+                           Placeholder="Keresd meg az ételed"
+                           TextChanged="Kereso_TextChanged"/>
+                <Label x:Name="osszkaloria"
+                       HorizontalOptions="Center"
+                       Padding="10"/>
             </StackLayout>
         </ListView.Header>
     </ListView>
-    
+
 </ContentPage>
-    <!--  <ContentPage.Content>
-        <CollectionView x:Name="etelek"
-                        ItemsSource="{Binding Eteleklista}"
-                        
-                        >
-            <CollectionView.ItemTemplate>
-                <DataTemplate>
-                    
-                    <Grid Padding="10">
-                        
-                        <StackLayout>
-                            <Button Text="Hozzáadás"
-                                        HorizontalOptions="EndAndExpand"/>
-                        </StackLayout>
-                        <StackLayout>
-                            <Label Text="{Binding Etelneve}" 
-                                   FontSize="Large"/>
-                            <Label Text="{Binding Etelemennyiseg}"/>
-                            <Label Text="{Binding Etelekaloria}"/>
-                            
-                        </StackLayout>
-                    </Grid>
-                </DataTemplate>
-            </CollectionView.ItemTemplate>
-        </CollectionView>
-    </ContentPage.Content>  -->

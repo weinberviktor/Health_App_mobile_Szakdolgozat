@@ -18,7 +18,7 @@ namespace Health_App_mobile.Views
             InitializeComponent();
             Eteleklista = new List<Etelek>();
             Eteleklista.Add(new Etelek { Etelneve = "Fehér kenyér", Etelemennyiseg = "60g/szelet", Etelekaloria="180 kcal" });
-            Eteleklista.Add(new Etelek { Etelneve = "Fehér kenyér", Etelemennyiseg = "180g/szelet", Etelekaloria = "60 kcal" });
+            Eteleklista.Add(new Etelek { Etelneve = "Barna kenyér", Etelemennyiseg = "180g/szelet", Etelekaloria = "60 kcal" });
             Eteleklista.Add(new Etelek { Etelneve = "Fehér kenyér", Etelemennyiseg = "180g/szelet", Etelekaloria = "60 kcal" });
             Eteleklista.Add(new Etelek { Etelneve = "Fehér kenyér", Etelemennyiseg = "180g/szelet", Etelekaloria = "60 kcal" });
             Eteleklista.Add(new Etelek { Etelneve = "Fehér kenyér", Etelemennyiseg = "180g/szelet", Etelekaloria = "60 kcal" });
@@ -33,21 +33,26 @@ namespace Health_App_mobile.Views
             public string Etelekaloria { get; set; }
         }
 
-
-        private void Button_Clicked(object sender, EventArgs e)
-        {
-            //Application.Current.Properties["Szoveg"] = etel.Text;
-            DisplayAlert("Étel felírva","Eltároltuk az ételed erre a napra","Ok");
-        }
-
-        private void Button_Clicked_1(object sender, EventArgs e)
-        {
-            //etel.Text = string.Empty;
-        }
-
         private void Button_Clicked_2(object sender, EventArgs e)
         {
-
+            //osszkaloria.Text = ($"{Eteleklista.Count}"+ "napi kalória");
         }
+
+        private void Kereso_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            var kereseserdemeny = Eteleklista.Where(k => k.Etelneve.ToLower().Contains(kereso.Text.ToLower()));
+            listview.ItemsSource = kereseserdemeny;
+        }
+
+        //private void Button_Clicked(object sender, EventArgs e)
+        //{
+        //    //Application.Current.Properties["Szoveg"] = etel.Text;
+        //    DisplayAlert("Étel felírva","Eltároltuk az ételed erre a napra","Ok");
+        //}
+
+        //private void Button_Clicked_1(object sender, EventArgs e)
+        //{
+        //    //etel.Text = string.Empty;
+        //} 
     }
 }
