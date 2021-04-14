@@ -87,7 +87,7 @@ namespace Health_App_mobile.Views
 
         private void Button_Clicked_2(object sender, EventArgs e)
         {
-            osszkaloria.Text = ($"{Eteleklista.Count}"+ "napi kalória");
+            osszkaloria.Text = ($"{(nameof(Etelek).Count())}"+ "napi kalória");
             //osszkaloria.Text = (nameof(Etelek));
             //osszkaloria.Text = Etelekaloria.ToString();
 

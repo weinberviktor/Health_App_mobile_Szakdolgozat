@@ -45,8 +45,13 @@
         </ListView.ItemTemplate>
         <ListView.Header>
             <StackLayout>
-                <Label Text="Napi kalória"
-                       FontSize="Large"/>
+                <Label Text="A mai naphoz tartozó kalória"
+                       FontSize="Large"
+                       HorizontalOptions="Center"
+                       TextColor="Black"/>
+                <DatePicker WidthRequest="100"
+                            HorizontalOptions="Center"
+                            Format="yyyy/MM/dd"/>
                 <SearchBar x:Name="kereso"
                            Placeholder="Keresd meg mit ettél"
                            TextChanged="Kereso_TextChanged"/>
