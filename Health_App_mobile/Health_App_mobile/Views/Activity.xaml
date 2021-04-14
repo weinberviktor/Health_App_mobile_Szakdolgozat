@@ -17,7 +17,8 @@
                 <ViewCell>
                     <Grid Padding="10">
                         <Frame  CornerRadius="20"
-                                HasShadow="True">
+                                HasShadow="True"
+                                BackgroundColor="Wheat">
                             <StackLayout Orientation="Horizontal">
                                 <StackLayout VerticalOptions="Center">
                                     <Label VerticalOptions="Center"
@@ -47,7 +48,7 @@
                 <Label Text="Napi kalória"
                        FontSize="Large"/>
                 <SearchBar x:Name="kereso"
-                           Placeholder="Keresd meg az ételed"
+                           Placeholder="Keresd meg mit ettél"
                            TextChanged="Kereso_TextChanged"/>
                 <Label x:Name="osszkaloria"
                        HorizontalOptions="Center"

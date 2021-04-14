@@ -25,6 +25,16 @@ namespace Health_App_mobile.Views
             Eteleklista.Add(new Etelek { Etelneve = "Vaj", Etelemennyiseg = "10g", Etelekaloria = "72 kcal" });
             Eteleklista.Add(new Etelek { Etelneve = "Csirkemell sonka", Etelemennyiseg = "1 szelet", Etelekaloria = "12 kcal" });
             Eteleklista.Add(new Etelek { Etelneve = "Téliszalámi", Etelemennyiseg = "10 g", Etelekaloria = "50 kcal" });
+            Eteleklista.Add(new Etelek { Etelneve = "Pulykamell sonka", Etelemennyiseg = "12 g", Etelekaloria = "13 kcal" });
+            Eteleklista.Add(new Etelek { Etelneve = "Sajtos Párizsi", Etelemennyiseg = "9 g", Etelekaloria = "13 kcal" });
+            Eteleklista.Add(new Etelek { Etelneve = "Főtt tojás", Etelemennyiseg = "1 db", Etelekaloria = "81 kcal" });
+            Eteleklista.Add(new Etelek { Etelneve = "Húsleves tésztával", Etelemennyiseg = "1 tányér", Etelekaloria = "188 kcal" });
+            Eteleklista.Add(new Etelek { Etelneve = "Zöldségleves", Etelemennyiseg = "1 tányér", Etelekaloria = "192 kcal" });
+            Eteleklista.Add(new Etelek { Etelneve = "Gulyásleves", Etelemennyiseg = "1 tányér", Etelekaloria = "356 kcal" });
+            Eteleklista.Add(new Etelek { Etelneve = "Bableves", Etelemennyiseg = "1 tányér", Etelekaloria = "384 kcal" });
+            Eteleklista.Add(new Etelek { Etelneve = "Gyömölcsleves", Etelemennyiseg = "1 tányér", Etelekaloria = "245 kcal" });
+            Eteleklista.Add(new Etelek { Etelneve = "Zöldborsóleves", Etelemennyiseg = "1 tányér", Etelekaloria = "198 kcal" });
+
 
             BindingContext = this;
         }
@@ -40,7 +50,8 @@ namespace Health_App_mobile.Views
         {
             //osszkaloria.Text = ($"{Eteleklista.Count}"+ "napi kalória");
             //osszkaloria.Text = (nameof(Etelek));
-            
+            //osszkaloria.Text = Etelekaloria.ToString();
+
         }
         private void Kereso_TextChanged(object sender, TextChangedEventArgs e)
         {
