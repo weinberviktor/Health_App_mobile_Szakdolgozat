@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -87,7 +84,7 @@ namespace Health_App_mobile.Views
 
         private void Button_Clicked_2(object sender, EventArgs e)
         {
-            osszkaloria.Text = ($"{(nameof(Etelek).Count())}"+ "napi kalória");
+            //osszkaloria.Text = ($"{(nameof(Etelek).Count())}"+ "napi kalória");
             //osszkaloria.Text = (nameof(Etelek));
             //osszkaloria.Text = Etelekaloria.ToString();
 
