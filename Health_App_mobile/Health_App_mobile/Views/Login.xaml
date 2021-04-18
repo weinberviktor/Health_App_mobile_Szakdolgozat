@@ -4,7 +4,9 @@
              x:Class="Health_App_mobile.Views.Login"
              xmlns:viewmodels="clr-namespace:Health_App_mobile.ViewModels"
              Title="Regisztrálás"
-             xmlns:models="clr-namespace:Health_App_mobile.Models" xmlns:health_app_mobile="clr-namespace:Health_App_mobile" x:DataType="health_app_mobile:AppShell">
+             xmlns:models="clr-namespace:Health_App_mobile.Models"
+             xmlns:health_app_mobile="clr-namespace:Health_App_mobile"
+             x:DataType="health_app_mobile:AppShell">
     
     <ContentPage.Content>
         <ScrollView>
