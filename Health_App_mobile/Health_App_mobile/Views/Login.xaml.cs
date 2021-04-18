@@ -16,7 +16,6 @@ namespace Health_App_mobile.Views
     {
         public Login()
         {
-            SetValue(NavigationPage.HasNavigationBarProperty, false);
             InitializeComponent();
         }
 
@@ -32,11 +31,7 @@ namespace Health_App_mobile.Views
             var lekerdzeses = db.Table<RegUsers>().Where(u => u.Felhasznev.Equals(Entryfelhasz.Text) && u.Jelszo.Equals(Entryjelsz.Text)).FirstOrDefault();
             if(lekerdzeses!=null)
             {
-                
-                //await DisplayAlert("Bejelentkezve", "Felül a 3 vonal alatt folytathatod az alkalmazás használatát.", "OK");
-                //App.Current.MainPage = new NavigationPage(new Activity());
                 await Shell.Current.GoToAsync($"//{nameof(Activity)}");
-                
             }
             else
             {
@@ -50,7 +45,6 @@ namespace Health_App_mobile.Views
                     }
                     else
                     {
-                        //await Navigation.PushAsync(new Login());
                         await Shell.Current.GoToAsync($"//{nameof(Activity)}");
                     }
                 });

@@ -18,10 +18,8 @@ namespace Health_mobile_app.ViewModels
         public ObservableRangeCollection<Diet> Diet { get; set; }
         public ObservableRangeCollection<Grouping<string, Diet>> DietGroup { get; set; }
         public AsyncCommand RefreshCommand { get; }
-
         public AsyncCommand<Diet> FavoriteCommand { get; }
         public AsyncCommand<Diet> SelectedCommand { get; }
-
         public Command LoadMoreCommand { get; }
         public Command DelayLoadMoreCommand { get; }
         public Command ClearCommand { get; }

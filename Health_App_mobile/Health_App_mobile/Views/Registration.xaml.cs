@@ -17,7 +17,6 @@ namespace Health_App_mobile.Views
     {
         public Registration()
         {
-            SetValue(NavigationPage.HasNavigationBarProperty, false);
             InitializeComponent();
         }
 
@@ -42,7 +41,6 @@ namespace Health_App_mobile.Views
                 {
                     await Shell.Current.GoToAsync($"//{nameof(Activity)}");
                 }
-
             });
         }
     }
