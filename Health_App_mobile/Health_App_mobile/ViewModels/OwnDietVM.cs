@@ -24,7 +24,7 @@ namespace Health_App_mobile.ViewModels
         async Task Add()
         {
             var etel = await App.Current.MainPage.DisplayPromptAsync("Saját Étrend", "Étel");
-            var mennyiseg = await App.Current.MainPage.DisplayPromptAsync("Mennyiség", "");
+            var mennyiseg = await App.Current.MainPage.DisplayPromptAsync("Mennyiség és hozzávalók ", "");
             await DietService.AddDiet(etel, mennyiseg);
             await Refresh();
         }

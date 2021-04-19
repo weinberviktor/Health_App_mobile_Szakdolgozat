@@ -4,7 +4,7 @@
              xmlns:viewmodels="clr-namespace:Health_App_mobile.ViewModels" 
              x:DataType="viewmodels:BMI"
              x:Class="Health_App_mobile.Views.BmiCalculator"
-             Title="BMI">
+             Title="Testtömeg Index">
 
     <FlexLayout Direction="Column"
                 JustifyContent="SpaceEvenly"
