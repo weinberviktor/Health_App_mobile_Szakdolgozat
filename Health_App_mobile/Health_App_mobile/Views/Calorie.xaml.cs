@@ -74,14 +74,12 @@ namespace Health_App_mobile.Views
             Eteleklista.Add(new Etelek { Etelneve = "Paradicsomos marharagu tésztával", Etelemennyiseg = "330 g", Etelekaloria = "625 kcal" });
             BindingContext = this;
         }
-
         public class Etelek
         {   
             public string Etelneve { get; set; }
             public string Etelemennyiseg { get; set; }
             public string Etelekaloria { get; set; }
         }
-
         private void Button_Clicked_2(object sender, EventArgs e)
         {
             //osszkaloria.Text = ($"{(nameof(Etelek).Count())}"+ "napi kalória");

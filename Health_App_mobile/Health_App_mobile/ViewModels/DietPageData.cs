@@ -49,7 +49,6 @@ namespace Health_mobile_app.ViewModels
             await Application.Current.MainPage.DisplayAlert("Kedvencekhez adva", diet.Etel, "OK");
 
         }
-        Diet previouslySelected;
         Diet selectedDiet;
         public Diet SelectedDiet
         {
@@ -73,7 +72,7 @@ namespace Health_mobile_app.ViewModels
 
         void LoadMore()
         {
-            if (Diet.Count >= 20)
+            if (Diet.Count >= 10)
                 return;
 
             Diet.Add(new Diet { Etkezes = "Reggeli", Etel = "Teljes kiőrlésű szendvics", Mennyiseg = "80g kenyér, 25g csirkemell felvágott, 1 marék salaáta  \n\t 245 kcal" });

@@ -10,7 +10,6 @@ namespace Health_App_mobile.ViewModels
         private double magassag = 180;
         private double testsuly = 72;
         private const double bmiindex = 1.0;
-
         public double Magassag
         {
             get => magassag;
@@ -20,7 +19,6 @@ namespace Health_App_mobile.ViewModels
                 Eredmenyfrissitese();
             }
         }
-
         public double Testsuly
         {
             get => testsuly;
@@ -30,10 +28,8 @@ namespace Health_App_mobile.ViewModels
                 Eredmenyfrissitese();
             }
         }
-
         public double Bmi
             => Math.Round(Testsuly / Math.Pow(Magassag / 100, 2), 2);
-
         public string Osztalyozas
         {
             get
@@ -48,13 +44,11 @@ namespace Health_App_mobile.ViewModels
                     return "Elhízott";
             }
         }
-
         private void Eredmenyfrissitese()
         {
             Valtozas(nameof(Bmi));
             Valtozas(nameof(Osztalyozas));
         }
-
         private double NextStep(double value)
             => Math.Round(value / bmiindex) * bmiindex;
 

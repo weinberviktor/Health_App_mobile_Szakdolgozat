@@ -2,11 +2,7 @@
 using Health_App_mobile.Services;
 using MvvmHelpers;
 using MvvmHelpers.Commands;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
-using Command = MvvmHelpers.Commands.Command;
 
 namespace Health_App_mobile.ViewModels
 {

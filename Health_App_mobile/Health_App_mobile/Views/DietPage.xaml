@@ -52,8 +52,8 @@
                                 </Image>
                                 <StackLayout VerticalOptions="Center">
                                     <Label VerticalOptions="Center"
-                                       FontSize="Medium"
-                                       Text="{Binding Etel}"/>
+                                           FontSize="Medium"
+                                           Text="{Binding Etel}"/>
                                     <Label VerticalOptions="Center"
                                        FontSize="Medium"
                                        Text="{Binding Mennyiseg}"/>
